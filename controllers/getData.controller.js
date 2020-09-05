@@ -1,7 +1,7 @@
 const { ref } = require("./dbController");
 
 const getData = (req, res) => {
-    ref.once("value", (data) => {
+    /* ref.once("value", (data) => {
         if (data.exists()) {
             res.json({
                 status: true,
@@ -15,6 +15,10 @@ const getData = (req, res) => {
         }
     }).catch((err) => {
         console.log(err.message);
+    }); */
+
+    res.json({
+        info: "success",
     });
 };
 
