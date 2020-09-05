@@ -1,0 +1,85 @@
+/* color are set to important to override boostrap default colors */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3em; }
+
+body {
+  background-color: #b1b1b1 !important;
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif; }
+  body .containter-fluid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  body .navbar {
+    width: 100%;
+    font-size: 2em; }
+    body .navbar .navbar-brand {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 2em;
+      height: 100%; }
+  body .table-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2em; }
+    body .table-container .dropdown .btn {
+      width: 7em;
+      font-size: 1.8em; }
+    body .table-container .dropdown .dropdown-menu {
+      width: 100%; }
+      body .table-container .dropdown .dropdown-menu .dropdown-item {
+        font-size: 1.5em; }
+    body .table-container table {
+      font-size: 1.8em;
+      margin-top: 2em;
+      width: 100%;
+      text-align: center; }
+      body .table-container table th,
+      body .table-container table td {
+        border: 1px solid black !important; }
+  body .modal input {
+    height: 4em; }
+    body .modal input::-webkit-input-placeholder {
+      font-size: 1.8em; }
+    body .modal input:-ms-input-placeholder {
+      font-size: 1.8em; }
+    body .modal input::-ms-input-placeholder {
+      font-size: 1.8em; }
+    body .modal input::placeholder {
+      font-size: 1.8em; }
+  body .modal label {
+    font-size: 2em; }
+  body .modal .btn {
+    font-size: 3em; }

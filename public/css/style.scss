@@ -1,0 +1,97 @@
+@import "./utilities/variables";
+
+/* color are set to important to override boostrap default colors */
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 3em;
+}
+
+body {
+    background-color: $secondaryColor;
+    width: 100%;
+    height: 100%;
+    font-family: $font;
+
+    .containter-fluid {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar {
+        width: 100%;
+        font-size: 2em;
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            height: 100%;
+        }
+    }
+
+    .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2em;
+
+        .dropdown {
+            .btn {
+                width: 7em;
+                font-size: 1.8em;
+            }
+
+            .dropdown-menu {
+                width: 100%;
+
+                .dropdown-item {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        table {
+            font-size: 1.8em;
+            margin-top: 2em;
+            width: 100%;
+            text-align: center;
+
+            th,
+            td {
+                border: 1px solid black !important;
+            }
+        }
+    }
+
+    .modal {
+        input {
+            height: 4em;
+
+            &::placeholder {
+                font-size: 1.8em;
+            }
+        }
+
+        label {
+            font-size: 2em;
+        }
+
+        .btn {
+            font-size: 3em;
+        }
+    }
+}
