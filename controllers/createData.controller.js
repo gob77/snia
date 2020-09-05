@@ -1,4 +1,4 @@
-const { ref } = require("./dbController");
+const { ref } = require("./db.controller");
 
 const searchData = (req, res, next) => {
     let item = req.body.item;

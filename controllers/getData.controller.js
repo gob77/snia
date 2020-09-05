@@ -1,4 +1,4 @@
-const { ref } = require("./dbController");
+const { ref } = require("./db.controller");
 
 const getData = (req, res) => {
     /* ref.once("value", (data) => {

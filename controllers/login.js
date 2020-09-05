@@ -1,4 +1,4 @@
-const { firebase } = require("./dbController");
+const { ref } = require("./db.controller");
 
 const logIn = (req, res) => {
     let { email, password } = req.body;

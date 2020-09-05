@@ -1,4 +1,4 @@
-const { ref } = require("./dbController");
+const { ref } = require("./db.controller");
 
 const deleteData = (req, res, user) => {
     if (user) {

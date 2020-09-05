@@ -1,4 +1,4 @@
-const { ref } = require("./dbController");
+const { ref } = require("./db.controller");
 
 const updateData = (req, res) => {
     let { key, precio, stock } = req.body;
