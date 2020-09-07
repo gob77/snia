@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             tr.setAttribute("data-categoria", parsed.info[index].producto);
             tr.setAttribute("data-key", index);
+            tr.setAttribute("class", "producto");
 
             let itemTXT = document.createTextNode(parsed.info[index].item);
             let precioTXT = document.createTextNode(`$${parsed.info[index].precio}`);
@@ -33,7 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     categorias.forEach((index) => {
         index.addEventListener("click", (event) => {
-            console.log(document.querySelectorAll(`[data-categoria=${event.target.id}`));
+            let products = [...document.getElementsByClassName("producto")];
+
+            products.forEach((index) => {
+                if (event.target.id != "todos") {
+                    if (index.dataset.categoria != event.target.id) {
+                        index.style.display = "none";
+                    } else {
+                        index.style.display = "";
+                    }
+                } else {
+                    index.style.display = "";
+                }
+            });
         });
     });
 });
