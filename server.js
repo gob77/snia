@@ -11,11 +11,7 @@ const port = 3000;
 app.use(express.static(__dirname + "/public"));
 
 app.listen(process.env.PORT || port, () => {
-    console.log(`Listening port: ${port}`);
+    console.log(`serving in http://localhost:${port}`);
 });
 
-app.get("/main", getData, (req, res) => {
-    res.json({
-        status: "success",
-    });
-});
+app.get("/main", getData, (req, res) => {});
