@@ -4,9 +4,11 @@ const { getData } = require("./controllers/getData.controller");
 const { createData, searchData } = require("./controllers/createData.controller");
 const { deleteData } = require("./controllers/deleteData.controller");
 const { updateData } = require("./controllers/updateData.controller");
-const { logIn, signedIn, logOut } = require("./controllers/login");
+const { logIn, signedIn, logOut } = require("./controllers/login.controller");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+app.use(express.json());
 
 app.use(express.static(__dirname + "/public"));
 
@@ -15,3 +17,11 @@ app.listen(process.env.PORT || port, () => {
 });
 
 app.get("/main", getData, (req, res) => {});
+
+app.post("/nuevoproducto", signedIn, createData, (req, res) => {});
+
+app.post("/login", logIn, (req, res) => {});
+
+app.post("/logout", logOut, (req, res) => {});
+
+app.post("/signedin", signedIn, (req, res) => {});

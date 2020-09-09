@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tbody = document.getElementById("tbody");
     const categorias = [...document.getElementsByClassName("dropdown-item")];
+    let login = document.getElementById("login");
 
     (async function () {
         let data = await fetch("/main");
@@ -48,5 +49,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+    });
+
+    login.addEventListener("click", async () => {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("pass").value;
+
+        let data = {
+            email,
+            password,
+        };
+
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(data),
+        };
+
+        let sendData = await fetch("/login", options);
+        let parsedData = await sendData.json();
+
+        console.log(parsedData);
     });
 });
